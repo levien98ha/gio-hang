@@ -1,0 +1,17 @@
+@import './../../style-common/variable.scss';
+
+.back-to-top-container {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: $back-to-top-primary;
+    border: 0.1px solid $back-to-top-border;
+    padding: 7px 10px;
+    border-radius: 4px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.tooltip-custom{
+    font-size: 16px;
+}

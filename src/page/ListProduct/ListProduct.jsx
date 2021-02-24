@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import ProductCard from "../../components/productCard/productCard";
 import './ListProduct.scss';
-import { Route } from 'react-router-dom';
 
 class ListProduct extends Component {
 

@@ -1,3 +1,4 @@
+import { ActionTypes as Action} from './../actions/actions'
 const initialState = {
     product: [{
         "id": 1,
@@ -565,9 +566,18 @@ const initialState = {
           "http://dummyimage.com/217x220.png/ff4444/ffffff"
         ]
       }],
-    detail: {}
+    detail: {},
+    cart: [],
+    total: null
 };
 
 export const ProductReducer = (state = initialState, action) => {
+  switch(action.type) {
+    case Action.VIEW_DETAIL: 
+      const detail = action.payload;
+      return {...state, detail};
+    default: 
+      break;
+  }
     return {...state}
 }

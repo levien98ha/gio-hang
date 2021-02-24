@@ -13,21 +13,21 @@ class ProductCard extends Component {
     render() {
         let {product} = this.props;
         return(
-                <Link to={'products/' + product.id} className="product-card" style={{ textDecoration: 'none' }}>
-                    <div className="product-sale">
-                        <span className="product-sale-detail">Trả góp 0%</span>
-                    </div>
-                    <div className="product-img">
-                        <img src={product.image[0]} alt={product.product_name}/>
-                    </div>
-                    <h3 className="product-name">{product.product_name}</h3>
-                    <div className="product-price">
-                        <strong>{this.currencyFormat(product.price)}</strong>
-                    </div>
-                    <div className="product-rate">
-                        <Rating name="half-rating-read" size="small" defaultValue={product.rate} precision={0.1} readOnly />
-                    </div>
-                </Link>
+            <Link to={'products/' + product.id} className="product-card" style={{ textDecoration: 'none' }} onClick={() => {this.props.viewDetail(product)}}>
+                <div className="product-sale">
+                    <span className="product-sale-detail">Trả góp 0%</span>
+                </div>
+                <div className="product-img">
+                    <img src={product.image[0]} alt={product.product_name}/>
+                </div>
+                <h3 className="product-name">{product.product_name}</h3>
+                <div className="product-price">
+                    <strong>{this.currencyFormat(product.price)}</strong>
+                </div>
+                <div className="product-rate">
+                    <Rating name="half-rating-read" size="small" defaultValue={product.rate} precision={0.1} readOnly />
+                </div>
+            </Link>
         )
     }
 }

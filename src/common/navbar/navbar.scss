@@ -1,0 +1,29 @@
+@import './../../style-common/variable.scss';
+
+.nav-container {
+    display: flex;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    .nav-item {
+        display: flex;
+        height: 40px;
+        vertical-align: middle;
+        padding: 0px 12px;
+        cursor: pointer;
+        span {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 7px;
+        }
+        svg {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+}
+
+.nav-item:hover {
+    background-color: $navbar-color-hover;
+}
